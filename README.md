@@ -9,9 +9,33 @@ A valid assembled structure should has the following properties:
 2. Should be a DAG
 
 ### To run this script
-* Sometimes (Or saying it can get avoid of most errors) you need to set **"Do not capture design history"** before running the script.
-* Copy the content of the generated "graph.txt" and go to http://www.webgraphviz.com/
+1. Sometimes (Or saying it can get avoid of most errors) you need to set **"Do not capture design history"** before running the script.
 
+2. Copy the content of the generated "graph.txt" and go to http://www.webgraphviz.com/
+
+### Correct Example:
+
+```
+digraph G {  "base_link" -> "Finger1link_0.0_v11" [ label = "Finger1" ] 
+  "base_link" -> "Finger2link_0.0_v11" [ label = "Finger2" ] 
+  "base_link" -> "Finger3link_0.0_v11" [ label = "Finger3" ] 
+  "base_link" -> "link_12.0_right_v11" [ label = "InHand" ] 
+  "link_12.0_right_v11" -> "Finger4link_0.0_v11" [ label = "Finger4" ] 
+  "Finger1link_0.0_v11" -> "Finger1link_1.0_v11" [ label = "Finger1_Link1" ] 
+  "Finger1link_1.0_v11" -> "Finger1link_2.0_v11" [ label = "Finger1_Link2" ] 
+  "Finger1link_2.0_v11" -> "Finger1link_3.0_v11" [ label = "Finger1_link3" ] 
+  "Finger2link_0.0_v11" -> "Finger2link_1.0_v11" [ label = "Finger2_Link1" ] 
+  "Finger2link_1.0_v11" -> "Finger2link_2.0_v11" [ label = "Finger2_Link2" ] 
+  "Finger2link_2.0_v11" -> "Finger2link_3.0_v11" [ label = "Finger2_link3" ] 
+  "Finger3link_0.0_v11" -> "Finger3link_1.0_v11" [ label = "Finger3_Link1" ] 
+  "Finger3link_1.0_v11" -> "Finger3link_2.0_v11" [ label = "Finger3_Link2" ] 
+  "Finger3link_2.0_v11" -> "Finger3link_3.0_v11" [ label = "Finger3_link3" ] 
+  "Finger4link_0.0_v11" -> "Finger4link_1.0_v11" [ label = "Finger4_Link1" ] 
+  "Finger4link_1.0_v11" -> "Finger4link_2.0_v11" [ label = "Finger4_Link2" ] 
+  "Finger4link_2.0_v11" -> "Finger4link_3.0_v11" [ label = "Finger4_link3" ] 
+}
+```
+![](https://github.com/yanshil/Joint2Graphviz/blob/master/imgs/Correct_graphviz.png)
 
 ### Wrong Example 1:
 

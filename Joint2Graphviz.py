@@ -120,9 +120,18 @@ def run(context):
         code = 'digraph G {'
         code += get_code(root)
         code += '}'
-        with open(os.path.join(save_dir, "graph.txt"), 'w') as f:
+        filepath = os.path.join(save_dir, "graph.txt")
+        with open(filepath, 'w') as f:
             f.write(code)
-        ui.messageBox('Graph created.\nPlease copy content in graph.txt to \nhttp://www.webgraphviz.com/\n and check result.', "Success")
+        
+        try:
+            os.startfile(filepath)
+        except:
+            pass
+        
+        msg = 'Please copy content in <span style="color: green">graph.txt</span> to <a href="http://www.webgraphviz.com/">http://www.webgraphviz.com/</a> and check result.<br/><br/>Graph File Location: <span style="color: green">{}</span>'.format(filepath)
+        # ui.messageBox('Graph File Location: {}\n\nPlease copy content in graph.txt to \nhttp://www.webgraphviz.com/\n and check result.'.format(filepath), "Success")
+        ui.messageBox(msg, "Success")
         #http://www.webgraphviz.com/
 
     except:
