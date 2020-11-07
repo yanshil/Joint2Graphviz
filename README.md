@@ -35,7 +35,7 @@ digraph G {  "base_link" -> "Finger1link_0.0_v11" [ label = "Finger1" ]
   "Finger4link_2.0_v11" -> "Finger4link_3.0_v11" [ label = "Finger4_link3" ] 
 }
 ```
-![](https://github.com/yanshil/Joint2Graphviz/blob/master/imgs/Correct_graphviz.png)
+![](https://github.com/yanshil/Joint2Graphviz/blob/master/imgs/Correct_graphviz.PNG)
 
 ### Wrong Example 1:
 
